@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qingxun-school.iml" filepath="$PROJECT_DIR$/qingxun-school.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingxun-school-app-missionapi/qingxun-school-app-missionapi.iml" filepath="$PROJECT_DIR$/qingxun-school-app-missionapi/qingxun-school-app-missionapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingxun-school-app-othapi/qingxun-school-app-othapi.iml" filepath="$PROJECT_DIR$/qingxun-school-app-othapi/qingxun-school-app-othapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingxun-school-app-userapi/qingxun-school-app-userapi.iml" filepath="$PROJECT_DIR$/qingxun-school-app-userapi/qingxun-school-app-userapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingxun-school-pub/qingxun-school-pub.iml" filepath="$PROJECT_DIR$/qingxun-school-pub/qingxun-school-pub.iml" />
+    </modules>
+  </component>
+</project>

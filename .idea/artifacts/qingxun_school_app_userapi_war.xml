@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="qingxun-school-app-userapi:war">
+    <output-path>$PROJECT_DIR$/qingxun-school-app-userapi/target</output-path>
+    <root id="archive" name="qingxun-school-app-userapi-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="qingxun-school-app-userapi:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,4 +1,7 @@
 # TODEY校园_uniapp
+
+## 前端地址 
+## <https://github.com/Jane-for/today-school>  
 > ## 基本信息   
  
     最后更新时间:2019年08月15日21:40:02  
@@ -25,8 +28,6 @@
     springboot + mybatis + jwt + generate + maven	
 
   ### 前端  
-   
-   <https://github.com/Jane-for/today-school>
     
     
     vue + ajax + uniapp

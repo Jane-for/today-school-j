@@ -131,5 +131,18 @@ public class MissionController {
     }
 
 
+    /**
+     * 获取最新的三条任务
+     * @return
+     */
+    @UserLoginToken
+    @PostMapping(value = "/getNewList")
+    public Map<String, Object> getNewList() {
+        return missionService.getNewList();
+    }
+
+
+
+
 
 }

@@ -39,15 +39,19 @@ public class SiteService {
         Map<String, Object> resultMap = new LinkedHashMap<>();
         resultMap.put("reason", "请求成功");
         resultMap.put("resultcode", 200);
+        try {
+            UserUser userUser = userUserDAO.selectByOpenid(openId);
+            Integer userId = userUser.getUserId();
 
-        UserUser userUser = userUserDAO.selectByOpenid(openId);
-        Integer userId = userUser.getUserId();
+            List<UserUserOth> userUserOth = siteDAO.get(userId);
 
-        List<UserUserOth> userUserOth = siteDAO.get(userId);
+            logger.info("SiteService", userUserOth);
 
-        logger.info("SiteService", userUserOth);
-
-        resultMap.put("result", userUserOth);
+            resultMap.put("result", userUserOth);
+        } catch (Exception e) {
+            logger.error(e.getLocalizedMessage());
+            resultMap.put("result", "程序异常");
+        }
         return resultMap;
     }
 
@@ -57,17 +61,67 @@ public class SiteService {
         resultMap.put("reason", "请求成功");
         resultMap.put("resultcode", 200);
 
-        UserUser userUser = userUserDAO.selectByOpenid(openId);
-        Integer userId = userUser.getUserId();
-        userUserOth.setUserId(userId);
-        int maxId = siteDAO.getMaxId() + 1;
-        userUserOth.setOthId(maxId);
+        try {
+            UserUser userUser = userUserDAO.selectByOpenid(openId);
+            Integer userId = userUser.getUserId();
+            userUserOth.setUserId(userId);
+            int maxId = siteDAO.getMaxId() + 1;
+            userUserOth.setOthId(maxId);
 //        userUserOth.
-        int num = userUserOthMapper.insertSelective(userUserOth);
+            int num = userUserOthMapper.insertSelective(userUserOth);
 
-        logger.info("SiteService", num);
+            logger.info("SiteService", num);
 
-        resultMap.put("result", num);
+            resultMap.put("result", num);
+        } catch (Exception e) {
+            logger.error(e.getLocalizedMessage());
+            resultMap.put("result", "程序异常");
+        }
+        return resultMap;
+    }
+
+    public Map<String, Object> delSite(String openId, String id) {
+
+        Map<String, Object> resultMap = new LinkedHashMap<>();
+        resultMap.put("reason", "请求成功");
+        resultMap.put("resultcode", 200);
+
+        try {
+            UserUser userUser = userUserDAO.selectByOpenid(openId);
+            Integer userId = userUser.getUserId();
+//        userUserOth.
+            int num = siteDAO.delSite(userId, id);
+            logger.info("SiteService", num);
+            if (num == 1) {
+                resultMap.put("result", "删除成功");
+            }
+        } catch (Exception e) {
+            logger.error(e.getLocalizedMessage());
+            resultMap.put("result", "程序异常");
+        }
+        return resultMap;
+    }
+
+    public Map<String, Object> userUpSite(String openId, UserUserOth userUserOth) {
+
+        Map<String, Object> resultMap = new LinkedHashMap<>();
+        resultMap.put("reason", "请求成功");
+        resultMap.put("resultcode", 200);
+
+        try {
+            UserUser userUser = userUserDAO.selectByOpenid(openId);
+            Integer userId = userUser.getUserId();
+            userUserOth.setUserId(userId);
+            int i = userUserOthMapper.updateByPrimaryKey(userUserOth);
+            if (i == 1) {
+                resultMap.put("result", "更新成功");
+            }else{
+                resultMap.put("result", "失败");
+            }
+        } catch (Exception e) {
+            logger.error(e.getLocalizedMessage());
+            resultMap.put("result", "程序异常");
+        }
         return resultMap;
     }
 }

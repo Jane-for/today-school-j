@@ -583,6 +583,76 @@ public class UserUserOthExample {
             addCriterion("user_id not between", value1, value2, "userId");
             return (Criteria) this;
         }
+
+        public Criteria andOthNameIsNull() {
+            addCriterion("oth_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameIsNotNull() {
+            addCriterion("oth_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameEqualTo(String value) {
+            addCriterion("oth_name =", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameNotEqualTo(String value) {
+            addCriterion("oth_name <>", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameGreaterThan(String value) {
+            addCriterion("oth_name >", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameGreaterThanOrEqualTo(String value) {
+            addCriterion("oth_name >=", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameLessThan(String value) {
+            addCriterion("oth_name <", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameLessThanOrEqualTo(String value) {
+            addCriterion("oth_name <=", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameLike(String value) {
+            addCriterion("oth_name like", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameNotLike(String value) {
+            addCriterion("oth_name not like", value, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameIn(List<String> values) {
+            addCriterion("oth_name in", values, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameNotIn(List<String> values) {
+            addCriterion("oth_name not in", values, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameBetween(String value1, String value2) {
+            addCriterion("oth_name between", value1, value2, "othName");
+            return (Criteria) this;
+        }
+
+        public Criteria andOthNameNotBetween(String value1, String value2) {
+            addCriterion("oth_name not between", value1, value2, "othName");
+            return (Criteria) this;
+        }
     }
 
     /**

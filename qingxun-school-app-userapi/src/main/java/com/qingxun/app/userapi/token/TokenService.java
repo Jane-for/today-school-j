@@ -51,4 +51,20 @@ public class TokenService {
 
         return userId;
     }
+    /**
+     * 通过网络请求的token直接返回当前有效的操作者id
+     * @param httpServletRequest
+     * @return
+     */
+    public String getOpenId(HttpServletRequest httpServletRequest){
+        String userToken = getUserToken(httpServletRequest);
+        String userId;
+        try {
+            userId = JWT.decode(userToken).getAudience().get(0);
+        } catch (JWTDecodeException j) {
+            throw new RuntimeException("401");
+        }
+
+        return userId;
+    }
 }

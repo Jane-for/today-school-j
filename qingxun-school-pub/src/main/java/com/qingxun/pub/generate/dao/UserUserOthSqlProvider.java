@@ -66,6 +66,10 @@ public class UserUserOthSqlProvider {
             sql.VALUES("oth_school", "#{othSchool,jdbcType=VARCHAR}");
         }
         
+        if (record.getUserId() != null) {
+            sql.VALUES("user_id", "#{userId,jdbcType=INTEGER}");
+        }
+        
         return sql.toString();
     }
 
@@ -86,6 +90,7 @@ public class UserUserOthSqlProvider {
         sql.SELECT("oth_phone");
         sql.SELECT("oth_suue");
         sql.SELECT("oth_school");
+        sql.SELECT("user_id");
         sql.FROM("user_user_oth");
         applyWhere(sql, example, false);
         
@@ -129,6 +134,10 @@ public class UserUserOthSqlProvider {
             sql.SET("oth_school = #{record.othSchool,jdbcType=VARCHAR}");
         }
         
+        if (record.getUserId() != null) {
+            sql.SET("user_id = #{record.userId,jdbcType=INTEGER}");
+        }
+        
         applyWhere(sql, example, true);
         return sql.toString();
     }
@@ -148,6 +157,7 @@ public class UserUserOthSqlProvider {
         sql.SET("oth_phone = #{record.othPhone,jdbcType=VARCHAR}");
         sql.SET("oth_suue = #{record.othSuue,jdbcType=VARCHAR}");
         sql.SET("oth_school = #{record.othSchool,jdbcType=VARCHAR}");
+        sql.SET("user_id = #{record.userId,jdbcType=INTEGER}");
         
         UserUserOthExample example = (UserUserOthExample) parameter.get("example");
         applyWhere(sql, example, true);
@@ -174,6 +184,10 @@ public class UserUserOthSqlProvider {
         
         if (record.getOthSchool() != null) {
             sql.SET("oth_school = #{othSchool,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getUserId() != null) {
+            sql.SET("user_id = #{userId,jdbcType=INTEGER}");
         }
         
         sql.WHERE("_id = #{id,jdbcType=INTEGER}");

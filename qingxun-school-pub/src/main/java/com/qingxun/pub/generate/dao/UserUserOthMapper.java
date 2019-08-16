@@ -58,10 +58,10 @@ public interface UserUserOthMapper {
     @Insert({
         "insert into user_user_oth (_id, oth_id, ",
         "oth_phone, oth_suue, ",
-        "oth_school)",
+        "oth_school, user_id)",
         "values (#{id,jdbcType=INTEGER}, #{othId,jdbcType=INTEGER}, ",
         "#{othPhone,jdbcType=VARCHAR}, #{othSuue,jdbcType=VARCHAR}, ",
-        "#{othSchool,jdbcType=VARCHAR})"
+        "#{othSchool,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER})"
     })
     int insert(UserUserOth record);
 
@@ -86,7 +86,8 @@ public interface UserUserOthMapper {
         @Result(column="oth_id", property="othId", jdbcType=JdbcType.INTEGER, id=true),
         @Result(column="oth_phone", property="othPhone", jdbcType=JdbcType.VARCHAR),
         @Result(column="oth_suue", property="othSuue", jdbcType=JdbcType.VARCHAR),
-        @Result(column="oth_school", property="othSchool", jdbcType=JdbcType.VARCHAR)
+        @Result(column="oth_school", property="othSchool", jdbcType=JdbcType.VARCHAR),
+        @Result(column="user_id", property="userId", jdbcType=JdbcType.INTEGER)
     })
     List<UserUserOth> selectByExample(UserUserOthExample example);
 
@@ -98,7 +99,7 @@ public interface UserUserOthMapper {
      */
     @Select({
         "select",
-        "_id, oth_id, oth_phone, oth_suue, oth_school",
+        "_id, oth_id, oth_phone, oth_suue, oth_school, user_id",
         "from user_user_oth",
         "where _id = #{id,jdbcType=INTEGER}",
           "and oth_id = #{othId,jdbcType=INTEGER}"
@@ -108,7 +109,8 @@ public interface UserUserOthMapper {
         @Result(column="oth_id", property="othId", jdbcType=JdbcType.INTEGER, id=true),
         @Result(column="oth_phone", property="othPhone", jdbcType=JdbcType.VARCHAR),
         @Result(column="oth_suue", property="othSuue", jdbcType=JdbcType.VARCHAR),
-        @Result(column="oth_school", property="othSchool", jdbcType=JdbcType.VARCHAR)
+        @Result(column="oth_school", property="othSchool", jdbcType=JdbcType.VARCHAR),
+        @Result(column="user_id", property="userId", jdbcType=JdbcType.INTEGER)
     })
     UserUserOth selectByPrimaryKey(UserUserOthKey key);
 
@@ -149,7 +151,8 @@ public interface UserUserOthMapper {
         "update user_user_oth",
         "set oth_phone = #{othPhone,jdbcType=VARCHAR},",
           "oth_suue = #{othSuue,jdbcType=VARCHAR},",
-          "oth_school = #{othSchool,jdbcType=VARCHAR}",
+          "oth_school = #{othSchool,jdbcType=VARCHAR},",
+          "user_id = #{userId,jdbcType=INTEGER}",
         "where _id = #{id,jdbcType=INTEGER}",
           "and oth_id = #{othId,jdbcType=INTEGER}"
     })

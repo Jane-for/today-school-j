@@ -64,4 +64,9 @@ public interface UserUserDAO {
             "where user_openid = '${id}'"
     })
     int updateByOpenid(@Param("img") String s, @Param("id") String openid);
+
+    @Update({
+            "UPDATE `user_user` SET `merchant_id` = ${merId} WHERE `user_id` = ${userId}"
+    })
+    int userPutMer(@Param("userId") Integer userId, @Param("merId") Integer merId);
 }

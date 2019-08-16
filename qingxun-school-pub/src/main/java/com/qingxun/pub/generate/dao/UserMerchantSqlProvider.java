@@ -70,6 +70,10 @@ public class UserMerchantSqlProvider {
             sql.VALUES("mer_sturts", "#{merSturts,jdbcType=INTEGER}");
         }
         
+        if (record.getMerPhone() != null) {
+            sql.VALUES("mer_phone", "#{merPhone,jdbcType=VARCHAR}");
+        }
+        
         return sql.toString();
     }
 
@@ -91,6 +95,7 @@ public class UserMerchantSqlProvider {
         sql.SELECT("mer_info");
         sql.SELECT("mer_imgurl");
         sql.SELECT("mer_sturts");
+        sql.SELECT("mer_phone");
         sql.FROM("user_merchant");
         applyWhere(sql, example, false);
         
@@ -138,6 +143,10 @@ public class UserMerchantSqlProvider {
             sql.SET("mer_sturts = #{record.merSturts,jdbcType=INTEGER}");
         }
         
+        if (record.getMerPhone() != null) {
+            sql.SET("mer_phone = #{record.merPhone,jdbcType=VARCHAR}");
+        }
+        
         applyWhere(sql, example, true);
         return sql.toString();
     }
@@ -158,6 +167,7 @@ public class UserMerchantSqlProvider {
         sql.SET("mer_info = #{record.merInfo,jdbcType=VARCHAR}");
         sql.SET("mer_imgurl = #{record.merImgurl,jdbcType=VARCHAR}");
         sql.SET("mer_sturts = #{record.merSturts,jdbcType=INTEGER}");
+        sql.SET("mer_phone = #{record.merPhone,jdbcType=VARCHAR}");
         
         UserMerchantExample example = (UserMerchantExample) parameter.get("example");
         applyWhere(sql, example, true);
@@ -188,6 +198,10 @@ public class UserMerchantSqlProvider {
         
         if (record.getMerSturts() != null) {
             sql.SET("mer_sturts = #{merSturts,jdbcType=INTEGER}");
+        }
+        
+        if (record.getMerPhone() != null) {
+            sql.SET("mer_phone = #{merPhone,jdbcType=VARCHAR}");
         }
         
         sql.WHERE("_id = #{id,jdbcType=INTEGER}");

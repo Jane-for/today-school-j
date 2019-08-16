@@ -10,9 +10,7 @@ import javax.swing.*;
 
 @ServletComponentScan
 @SpringBootApplication
-@MapperScan("com.qingxun.pub.generate.dao")
-@MapperScan("com.qingxun.pub.mission")
-@MapperScan("com.qingxun.pub.user")
+@MapperScan("com.qingxun.pub")
 public class AppMissionapiApplication {
 
 	public static void main(String[] args) {

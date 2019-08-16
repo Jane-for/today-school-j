@@ -583,6 +583,76 @@ public class UserMerchantExample {
             addCriterion("mer_sturts not between", value1, value2, "merSturts");
             return (Criteria) this;
         }
+
+        public Criteria andMerPhoneIsNull() {
+            addCriterion("mer_phone is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneIsNotNull() {
+            addCriterion("mer_phone is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneEqualTo(String value) {
+            addCriterion("mer_phone =", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneNotEqualTo(String value) {
+            addCriterion("mer_phone <>", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneGreaterThan(String value) {
+            addCriterion("mer_phone >", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneGreaterThanOrEqualTo(String value) {
+            addCriterion("mer_phone >=", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneLessThan(String value) {
+            addCriterion("mer_phone <", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneLessThanOrEqualTo(String value) {
+            addCriterion("mer_phone <=", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneLike(String value) {
+            addCriterion("mer_phone like", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneNotLike(String value) {
+            addCriterion("mer_phone not like", value, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneIn(List<String> values) {
+            addCriterion("mer_phone in", values, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneNotIn(List<String> values) {
+            addCriterion("mer_phone not in", values, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneBetween(String value1, String value2) {
+            addCriterion("mer_phone between", value1, value2, "merPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerPhoneNotBetween(String value1, String value2) {
+            addCriterion("mer_phone not between", value1, value2, "merPhone");
+            return (Criteria) this;
+        }
     }
 
     /**

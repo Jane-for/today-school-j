@@ -8,6 +8,7 @@
         <module>qingxun-school-app-missionapi</module>
         <module>qingxun-school-app-userapi</module>
         <module>qingxun-school-app-othapi</module>
+        <module>qingxun-school-app-merchantapi</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

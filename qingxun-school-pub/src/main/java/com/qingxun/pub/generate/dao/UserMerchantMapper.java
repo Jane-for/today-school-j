@@ -58,10 +58,12 @@ public interface UserMerchantMapper {
     @Insert({
         "insert into user_merchant (_id, mer_id, ",
         "mer_name, mer_info, ",
-        "mer_imgurl, mer_sturts)",
+        "mer_imgurl, mer_sturts, ",
+        "mer_phone)",
         "values (#{id,jdbcType=INTEGER}, #{merId,jdbcType=INTEGER}, ",
         "#{merName,jdbcType=VARCHAR}, #{merInfo,jdbcType=VARCHAR}, ",
-        "#{merImgurl,jdbcType=VARCHAR}, #{merSturts,jdbcType=INTEGER})"
+        "#{merImgurl,jdbcType=VARCHAR}, #{merSturts,jdbcType=INTEGER}, ",
+        "#{merPhone,jdbcType=VARCHAR})"
     })
     int insert(UserMerchant record);
 
@@ -87,7 +89,8 @@ public interface UserMerchantMapper {
         @Result(column="mer_name", property="merName", jdbcType=JdbcType.VARCHAR),
         @Result(column="mer_info", property="merInfo", jdbcType=JdbcType.VARCHAR),
         @Result(column="mer_imgurl", property="merImgurl", jdbcType=JdbcType.VARCHAR),
-        @Result(column="mer_sturts", property="merSturts", jdbcType=JdbcType.INTEGER)
+        @Result(column="mer_sturts", property="merSturts", jdbcType=JdbcType.INTEGER),
+        @Result(column="mer_phone", property="merPhone", jdbcType=JdbcType.VARCHAR)
     })
     List<UserMerchant> selectByExample(UserMerchantExample example);
 
@@ -99,7 +102,7 @@ public interface UserMerchantMapper {
      */
     @Select({
         "select",
-        "_id, mer_id, mer_name, mer_info, mer_imgurl, mer_sturts",
+        "_id, mer_id, mer_name, mer_info, mer_imgurl, mer_sturts, mer_phone",
         "from user_merchant",
         "where _id = #{id,jdbcType=INTEGER}",
           "and mer_id = #{merId,jdbcType=INTEGER}"
@@ -110,7 +113,8 @@ public interface UserMerchantMapper {
         @Result(column="mer_name", property="merName", jdbcType=JdbcType.VARCHAR),
         @Result(column="mer_info", property="merInfo", jdbcType=JdbcType.VARCHAR),
         @Result(column="mer_imgurl", property="merImgurl", jdbcType=JdbcType.VARCHAR),
-        @Result(column="mer_sturts", property="merSturts", jdbcType=JdbcType.INTEGER)
+        @Result(column="mer_sturts", property="merSturts", jdbcType=JdbcType.INTEGER),
+        @Result(column="mer_phone", property="merPhone", jdbcType=JdbcType.VARCHAR)
     })
     UserMerchant selectByPrimaryKey(UserMerchantKey key);
 
@@ -152,7 +156,8 @@ public interface UserMerchantMapper {
         "set mer_name = #{merName,jdbcType=VARCHAR},",
           "mer_info = #{merInfo,jdbcType=VARCHAR},",
           "mer_imgurl = #{merImgurl,jdbcType=VARCHAR},",
-          "mer_sturts = #{merSturts,jdbcType=INTEGER}",
+          "mer_sturts = #{merSturts,jdbcType=INTEGER},",
+          "mer_phone = #{merPhone,jdbcType=VARCHAR}",
         "where _id = #{id,jdbcType=INTEGER}",
           "and mer_id = #{merId,jdbcType=INTEGER}"
     })

@@ -384,143 +384,203 @@ public class UserMerchantExample {
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoIsNull() {
-            addCriterion("mar_info is null");
+        public Criteria andMerInfoIsNull() {
+            addCriterion("mer_info is null");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoIsNotNull() {
-            addCriterion("mar_info is not null");
+        public Criteria andMerInfoIsNotNull() {
+            addCriterion("mer_info is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoEqualTo(String value) {
-            addCriterion("mar_info =", value, "marInfo");
+        public Criteria andMerInfoEqualTo(String value) {
+            addCriterion("mer_info =", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoNotEqualTo(String value) {
-            addCriterion("mar_info <>", value, "marInfo");
+        public Criteria andMerInfoNotEqualTo(String value) {
+            addCriterion("mer_info <>", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoGreaterThan(String value) {
-            addCriterion("mar_info >", value, "marInfo");
+        public Criteria andMerInfoGreaterThan(String value) {
+            addCriterion("mer_info >", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoGreaterThanOrEqualTo(String value) {
-            addCriterion("mar_info >=", value, "marInfo");
+        public Criteria andMerInfoGreaterThanOrEqualTo(String value) {
+            addCriterion("mer_info >=", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoLessThan(String value) {
-            addCriterion("mar_info <", value, "marInfo");
+        public Criteria andMerInfoLessThan(String value) {
+            addCriterion("mer_info <", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoLessThanOrEqualTo(String value) {
-            addCriterion("mar_info <=", value, "marInfo");
+        public Criteria andMerInfoLessThanOrEqualTo(String value) {
+            addCriterion("mer_info <=", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoLike(String value) {
-            addCriterion("mar_info like", value, "marInfo");
+        public Criteria andMerInfoLike(String value) {
+            addCriterion("mer_info like", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoNotLike(String value) {
-            addCriterion("mar_info not like", value, "marInfo");
+        public Criteria andMerInfoNotLike(String value) {
+            addCriterion("mer_info not like", value, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoIn(List<String> values) {
-            addCriterion("mar_info in", values, "marInfo");
+        public Criteria andMerInfoIn(List<String> values) {
+            addCriterion("mer_info in", values, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoNotIn(List<String> values) {
-            addCriterion("mar_info not in", values, "marInfo");
+        public Criteria andMerInfoNotIn(List<String> values) {
+            addCriterion("mer_info not in", values, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoBetween(String value1, String value2) {
-            addCriterion("mar_info between", value1, value2, "marInfo");
+        public Criteria andMerInfoBetween(String value1, String value2) {
+            addCriterion("mer_info between", value1, value2, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoNotBetween(String value1, String value2) {
-            addCriterion("mar_info not between", value1, value2, "marInfo");
+        public Criteria andMerInfoNotBetween(String value1, String value2) {
+            addCriterion("mer_info not between", value1, value2, "merInfo");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlIsNull() {
-            addCriterion("mar_info_imgurl is null");
+        public Criteria andMerImgurlIsNull() {
+            addCriterion("mer_imgurl is null");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlIsNotNull() {
-            addCriterion("mar_info_imgurl is not null");
+        public Criteria andMerImgurlIsNotNull() {
+            addCriterion("mer_imgurl is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlEqualTo(String value) {
-            addCriterion("mar_info_imgurl =", value, "marInfoImgurl");
+        public Criteria andMerImgurlEqualTo(String value) {
+            addCriterion("mer_imgurl =", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlNotEqualTo(String value) {
-            addCriterion("mar_info_imgurl <>", value, "marInfoImgurl");
+        public Criteria andMerImgurlNotEqualTo(String value) {
+            addCriterion("mer_imgurl <>", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlGreaterThan(String value) {
-            addCriterion("mar_info_imgurl >", value, "marInfoImgurl");
+        public Criteria andMerImgurlGreaterThan(String value) {
+            addCriterion("mer_imgurl >", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlGreaterThanOrEqualTo(String value) {
-            addCriterion("mar_info_imgurl >=", value, "marInfoImgurl");
+        public Criteria andMerImgurlGreaterThanOrEqualTo(String value) {
+            addCriterion("mer_imgurl >=", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlLessThan(String value) {
-            addCriterion("mar_info_imgurl <", value, "marInfoImgurl");
+        public Criteria andMerImgurlLessThan(String value) {
+            addCriterion("mer_imgurl <", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlLessThanOrEqualTo(String value) {
-            addCriterion("mar_info_imgurl <=", value, "marInfoImgurl");
+        public Criteria andMerImgurlLessThanOrEqualTo(String value) {
+            addCriterion("mer_imgurl <=", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlLike(String value) {
-            addCriterion("mar_info_imgurl like", value, "marInfoImgurl");
+        public Criteria andMerImgurlLike(String value) {
+            addCriterion("mer_imgurl like", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlNotLike(String value) {
-            addCriterion("mar_info_imgurl not like", value, "marInfoImgurl");
+        public Criteria andMerImgurlNotLike(String value) {
+            addCriterion("mer_imgurl not like", value, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlIn(List<String> values) {
-            addCriterion("mar_info_imgurl in", values, "marInfoImgurl");
+        public Criteria andMerImgurlIn(List<String> values) {
+            addCriterion("mer_imgurl in", values, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlNotIn(List<String> values) {
-            addCriterion("mar_info_imgurl not in", values, "marInfoImgurl");
+        public Criteria andMerImgurlNotIn(List<String> values) {
+            addCriterion("mer_imgurl not in", values, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlBetween(String value1, String value2) {
-            addCriterion("mar_info_imgurl between", value1, value2, "marInfoImgurl");
+        public Criteria andMerImgurlBetween(String value1, String value2) {
+            addCriterion("mer_imgurl between", value1, value2, "merImgurl");
             return (Criteria) this;
         }
 
-        public Criteria andMarInfoImgurlNotBetween(String value1, String value2) {
-            addCriterion("mar_info_imgurl not between", value1, value2, "marInfoImgurl");
+        public Criteria andMerImgurlNotBetween(String value1, String value2) {
+            addCriterion("mer_imgurl not between", value1, value2, "merImgurl");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsIsNull() {
+            addCriterion("mer_sturts is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsIsNotNull() {
+            addCriterion("mer_sturts is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsEqualTo(Integer value) {
+            addCriterion("mer_sturts =", value, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsNotEqualTo(Integer value) {
+            addCriterion("mer_sturts <>", value, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsGreaterThan(Integer value) {
+            addCriterion("mer_sturts >", value, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsGreaterThanOrEqualTo(Integer value) {
+            addCriterion("mer_sturts >=", value, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsLessThan(Integer value) {
+            addCriterion("mer_sturts <", value, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsLessThanOrEqualTo(Integer value) {
+            addCriterion("mer_sturts <=", value, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsIn(List<Integer> values) {
+            addCriterion("mer_sturts in", values, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsNotIn(List<Integer> values) {
+            addCriterion("mer_sturts not in", values, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsBetween(Integer value1, Integer value2) {
+            addCriterion("mer_sturts between", value1, value2, "merSturts");
+            return (Criteria) this;
+        }
+
+        public Criteria andMerSturtsNotBetween(Integer value1, Integer value2) {
+            addCriterion("mer_sturts not between", value1, value2, "merSturts");
             return (Criteria) this;
         }
     }

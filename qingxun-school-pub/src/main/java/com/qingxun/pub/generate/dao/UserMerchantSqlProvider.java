@@ -58,12 +58,16 @@ public class UserMerchantSqlProvider {
             sql.VALUES("mer_name", "#{merName,jdbcType=VARCHAR}");
         }
         
-        if (record.getMarInfo() != null) {
-            sql.VALUES("mar_info", "#{marInfo,jdbcType=VARCHAR}");
+        if (record.getMerInfo() != null) {
+            sql.VALUES("mer_info", "#{merInfo,jdbcType=VARCHAR}");
         }
         
-        if (record.getMarInfoImgurl() != null) {
-            sql.VALUES("mar_info_imgurl", "#{marInfoImgurl,jdbcType=VARCHAR}");
+        if (record.getMerImgurl() != null) {
+            sql.VALUES("mer_imgurl", "#{merImgurl,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getMerSturts() != null) {
+            sql.VALUES("mer_sturts", "#{merSturts,jdbcType=INTEGER}");
         }
         
         return sql.toString();
@@ -84,8 +88,9 @@ public class UserMerchantSqlProvider {
         }
         sql.SELECT("mer_id");
         sql.SELECT("mer_name");
-        sql.SELECT("mar_info");
-        sql.SELECT("mar_info_imgurl");
+        sql.SELECT("mer_info");
+        sql.SELECT("mer_imgurl");
+        sql.SELECT("mer_sturts");
         sql.FROM("user_merchant");
         applyWhere(sql, example, false);
         
@@ -121,12 +126,16 @@ public class UserMerchantSqlProvider {
             sql.SET("mer_name = #{record.merName,jdbcType=VARCHAR}");
         }
         
-        if (record.getMarInfo() != null) {
-            sql.SET("mar_info = #{record.marInfo,jdbcType=VARCHAR}");
+        if (record.getMerInfo() != null) {
+            sql.SET("mer_info = #{record.merInfo,jdbcType=VARCHAR}");
         }
         
-        if (record.getMarInfoImgurl() != null) {
-            sql.SET("mar_info_imgurl = #{record.marInfoImgurl,jdbcType=VARCHAR}");
+        if (record.getMerImgurl() != null) {
+            sql.SET("mer_imgurl = #{record.merImgurl,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getMerSturts() != null) {
+            sql.SET("mer_sturts = #{record.merSturts,jdbcType=INTEGER}");
         }
         
         applyWhere(sql, example, true);
@@ -146,8 +155,9 @@ public class UserMerchantSqlProvider {
         sql.SET("_id = #{record.id,jdbcType=INTEGER}");
         sql.SET("mer_id = #{record.merId,jdbcType=INTEGER}");
         sql.SET("mer_name = #{record.merName,jdbcType=VARCHAR}");
-        sql.SET("mar_info = #{record.marInfo,jdbcType=VARCHAR}");
-        sql.SET("mar_info_imgurl = #{record.marInfoImgurl,jdbcType=VARCHAR}");
+        sql.SET("mer_info = #{record.merInfo,jdbcType=VARCHAR}");
+        sql.SET("mer_imgurl = #{record.merImgurl,jdbcType=VARCHAR}");
+        sql.SET("mer_sturts = #{record.merSturts,jdbcType=INTEGER}");
         
         UserMerchantExample example = (UserMerchantExample) parameter.get("example");
         applyWhere(sql, example, true);
@@ -168,12 +178,16 @@ public class UserMerchantSqlProvider {
             sql.SET("mer_name = #{merName,jdbcType=VARCHAR}");
         }
         
-        if (record.getMarInfo() != null) {
-            sql.SET("mar_info = #{marInfo,jdbcType=VARCHAR}");
+        if (record.getMerInfo() != null) {
+            sql.SET("mer_info = #{merInfo,jdbcType=VARCHAR}");
         }
         
-        if (record.getMarInfoImgurl() != null) {
-            sql.SET("mar_info_imgurl = #{marInfoImgurl,jdbcType=VARCHAR}");
+        if (record.getMerImgurl() != null) {
+            sql.SET("mer_imgurl = #{merImgurl,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getMerSturts() != null) {
+            sql.SET("mer_sturts = #{merSturts,jdbcType=INTEGER}");
         }
         
         sql.WHERE("_id = #{id,jdbcType=INTEGER}");

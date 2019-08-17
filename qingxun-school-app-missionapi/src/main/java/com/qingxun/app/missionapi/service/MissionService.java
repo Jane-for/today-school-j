@@ -224,4 +224,29 @@ public class MissionService {
         resultMap.put("result", i);
         return resultMap;
     }
+
+    public Map<String, Object> getNewList() {
+        Map<String, Object> resultMap = new LinkedHashMap<>();
+        resultMap.put("reason", "请求成功");
+        resultMap.put("resultcode", 200);
+
+        try {
+            List<ViewMisAll> allMis = viewAllMisDAO.getNewList();
+
+            List<ViewMisAll> viewAllMis = new ArrayList<>();
+            for (ViewMisAll allMi : allMis) {
+                String misContent = allMi.getMisContent();
+                String substring = misContent.substring(0, 5) + "...";
+                allMi.setMisContent(substring);
+                viewAllMis.add(allMi);
+            }
+            resultMap.put("result", viewAllMis);
+
+        } catch (Exception e) {
+            System.err.println("com.qingxun.app.userapi.service.UserUserService###" + e.toString());
+            resultMap.put("result", "程序异常");
+        }
+        return resultMap;
+
+    }
 }

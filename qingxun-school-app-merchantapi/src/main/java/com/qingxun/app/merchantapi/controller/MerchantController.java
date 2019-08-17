@@ -51,5 +51,19 @@ public class MerchantController {
         String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
         return merchantService.ifUserPutMer(userIdByToken);
     }
+    /**
+     * 用户获取自己的店铺信息
+     *
+     * @param httpServletRequest
+     * @return
+     */
+    @UserLoginToken
+    @PostMapping("/userGetMer")
+    public Map<String, Object> userGetMer(HttpServletRequest httpServletRequest) {
+        String openId = tokenService.getOpenId(httpServletRequest);
+        return merchantService.userGetMer(openId);
+    }
+
+
 
 }

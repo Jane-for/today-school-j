@@ -82,4 +82,16 @@ public class MerchantService {
         resultMap.put("result", i);
         return resultMap;
     }
+
+    public Map<String, Object> userGetMer(String openId) {
+        Map<String, Object> resultMap = new LinkedHashMap<>();
+        resultMap.put("reason", "请求成功");
+        resultMap.put("resultcode", 200);
+
+        UserUser userUser = userUserDAO.selectByOpenid(openId);
+        Integer userId = userUser.getMerchantId();
+        UserMerchant userMerchant = userMerchantDAO.userGetMer(userId);
+        resultMap.put("result", userMerchant);
+        return resultMap;
+    }
 }

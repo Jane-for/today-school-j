@@ -38,7 +38,7 @@ public class MerchantController {
     @UserLoginToken
     @PostMapping("/userPutMer")
     public Map<String, Object> userPutMer(HttpServletRequest httpServletRequest, @RequestBody Map<String, Object> map) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return merchantService.userPutMer(userIdByToken, map);
     }
 
@@ -51,7 +51,7 @@ public class MerchantController {
     @UserLoginToken
     @PostMapping("/ifUserPutMer")
     public Map<String, Object> ifUserPutMer(HttpServletRequest httpServletRequest) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return merchantService.ifUserPutMer(userIdByToken);
     }
     /**
@@ -63,7 +63,7 @@ public class MerchantController {
     @UserLoginToken
     @PostMapping("/userGetMer")
     public Map<String, Object> userGetMer(HttpServletRequest httpServletRequest) {
-        String openId = tokenService.getUserIdByToken(httpServletRequest);
+        String openId = tokenService.getOpenId(httpServletRequest);
         return merchantService.userGetMer(openId);
     }
 

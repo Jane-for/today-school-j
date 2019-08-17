@@ -36,7 +36,7 @@ public class MerCommodityController {
     @UserLoginToken
     @PostMapping(value = "/get")
     public Map<String, Object> get(HttpServletRequest httpServletRequest) {
-        String openId = tokenService.getUserIdByToken(httpServletRequest);
+        String openId = tokenService.getOpenId(httpServletRequest);
         return merCommodityService.get(openId);
     }
 
@@ -48,7 +48,7 @@ public class MerCommodityController {
     @UserLoginToken
     @PostMapping("/getType1")
     public Map<String, Object> getType1(HttpServletRequest httpServletRequest) {
-        String openId = tokenService.getUserIdByToken(httpServletRequest);
+        String openId = tokenService.getOpenId(httpServletRequest);
         return merCommodityService.getType1(openId);
     }
 

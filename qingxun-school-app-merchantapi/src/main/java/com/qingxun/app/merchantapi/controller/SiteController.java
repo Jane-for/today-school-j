@@ -31,7 +31,7 @@ public class SiteController {
     @UserLoginToken
     @PostMapping("/get")
     public Map<String, Object> get(HttpServletRequest httpServletRequest) {
-        String openId = tokenService.getOpenId(httpServletRequest);
+        String openId = tokenService.getUserIdByToken(httpServletRequest);
         return siteService.get(openId);
 
     }
@@ -39,7 +39,7 @@ public class SiteController {
     @UserLoginToken
     @PostMapping(value = "/userAddSite")
     public Map<String, Object> userAddSite(HttpServletRequest httpServletRequest, @RequestBody UserUserOth userUserOth) {
-        String openId = tokenService.getOpenId(httpServletRequest);
+        String openId = tokenService.getUserIdByToken(httpServletRequest);
         logger.info("userUserOth.getOthPhone()###", userUserOth.getOthPhone());
         return siteService.userAddSite(openId, userUserOth);
 
@@ -48,7 +48,7 @@ public class SiteController {
     @UserLoginToken
     @PostMapping(value = "/userUpSite")
     public Map<String, Object> userUpSite(HttpServletRequest httpServletRequest, @RequestBody UserUserOth userUserOth) {
-        String openId = tokenService.getOpenId(httpServletRequest);
+        String openId = tokenService.getUserIdByToken(httpServletRequest);
         logger.info("userUserOth.getOthPhone()###", userUserOth.getOthPhone());
         return siteService.userUpSite(openId, userUserOth);
 
@@ -57,7 +57,7 @@ public class SiteController {
     @UserLoginToken
     @DeleteMapping("/{id}")
     public Map<String, Object> delSite(HttpServletRequest httpServletRequest, @PathVariable String id) {
-        String openId = tokenService.getOpenId(httpServletRequest);
+        String openId = tokenService.getUserIdByToken(httpServletRequest);
 
         return siteService.delSite(openId, id);
 

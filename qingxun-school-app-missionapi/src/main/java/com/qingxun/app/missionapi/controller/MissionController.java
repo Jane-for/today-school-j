@@ -22,7 +22,6 @@ public class MissionController {
 
     @Autowired
     public MissionController(MissionService missionService) {
-
         this.missionService = missionService;
     }
 

@@ -57,11 +57,11 @@ public interface CommodityMapper {
         "insert into commodity (_id, mar_id, ",
         "com_id, com_imgurl, ",
         "com_struts, com_top, ",
-        "com_typy_id1)",
+        "type1_id, com_name)",
         "values (#{id,jdbcType=INTEGER}, #{marId,jdbcType=INTEGER}, ",
         "#{comId,jdbcType=INTEGER}, #{comImgurl,jdbcType=VARCHAR}, ",
         "#{comStruts,jdbcType=VARCHAR}, #{comTop,jdbcType=INTEGER}, ",
-        "#{comTypyId1,jdbcType=INTEGER})"
+        "#{type1Id,jdbcType=INTEGER}, #{comName,jdbcType=VARCHAR})"
     })
     int insert(Commodity record);
 
@@ -88,7 +88,8 @@ public interface CommodityMapper {
         @Result(column="com_imgurl", property="comImgurl", jdbcType=JdbcType.VARCHAR),
         @Result(column="com_struts", property="comStruts", jdbcType=JdbcType.VARCHAR),
         @Result(column="com_top", property="comTop", jdbcType=JdbcType.INTEGER),
-        @Result(column="com_typy_id1", property="comTypyId1", jdbcType=JdbcType.INTEGER)
+        @Result(column="type1_id", property="type1Id", jdbcType=JdbcType.INTEGER),
+        @Result(column="com_name", property="comName", jdbcType=JdbcType.VARCHAR)
     })
     List<Commodity> selectByExample(CommodityExample example);
 
@@ -100,7 +101,7 @@ public interface CommodityMapper {
      */
     @Select({
         "select",
-        "_id, mar_id, com_id, com_imgurl, com_struts, com_top, com_typy_id1",
+        "_id, mar_id, com_id, com_imgurl, com_struts, com_top, type1_id, com_name",
         "from commodity",
         "where _id = #{id,jdbcType=INTEGER}"
     })
@@ -111,7 +112,8 @@ public interface CommodityMapper {
         @Result(column="com_imgurl", property="comImgurl", jdbcType=JdbcType.VARCHAR),
         @Result(column="com_struts", property="comStruts", jdbcType=JdbcType.VARCHAR),
         @Result(column="com_top", property="comTop", jdbcType=JdbcType.INTEGER),
-        @Result(column="com_typy_id1", property="comTypyId1", jdbcType=JdbcType.INTEGER)
+        @Result(column="type1_id", property="type1Id", jdbcType=JdbcType.INTEGER),
+        @Result(column="com_name", property="comName", jdbcType=JdbcType.VARCHAR)
     })
     Commodity selectByPrimaryKey(Integer id);
 
@@ -155,7 +157,8 @@ public interface CommodityMapper {
           "com_imgurl = #{comImgurl,jdbcType=VARCHAR},",
           "com_struts = #{comStruts,jdbcType=VARCHAR},",
           "com_top = #{comTop,jdbcType=INTEGER},",
-          "com_typy_id1 = #{comTypyId1,jdbcType=INTEGER}",
+          "type1_id = #{type1Id,jdbcType=INTEGER},",
+          "com_name = #{comName,jdbcType=VARCHAR}",
         "where _id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Commodity record);

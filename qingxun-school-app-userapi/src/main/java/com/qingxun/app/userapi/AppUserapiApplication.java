@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import javax.swing.*;
 
@@ -12,7 +13,7 @@ import javax.swing.*;
 @SpringBootApplication
 @MapperScan("com.qingxun.pub.generate.dao")
 @MapperScan("com.qingxun.pub.user")
-public class AppUserapiApplication {
+public class AppUserapiApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
 

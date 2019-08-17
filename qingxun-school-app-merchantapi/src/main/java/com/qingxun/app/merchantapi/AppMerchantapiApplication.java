@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import javax.swing.*;
 
@@ -11,7 +12,7 @@ import javax.swing.*;
 @ServletComponentScan
 @SpringBootApplication
 @MapperScan("com.qingxun.pub")
-public class AppMerchantapiApplication {
+public class AppMerchantapiApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
 

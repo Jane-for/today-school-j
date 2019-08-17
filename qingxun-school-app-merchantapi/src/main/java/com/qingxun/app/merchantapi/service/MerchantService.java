@@ -5,8 +5,6 @@ import com.qingxun.pub.generate.pojo.UserMerchant;
 import com.qingxun.pub.generate.pojo.UserUser;
 import com.qingxun.pub.merchant.UserMerchantDAO;
 import com.qingxun.pub.user.UserUserDAO;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

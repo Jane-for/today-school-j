@@ -1,5 +1,6 @@
 package com.qingxun.app.merchantapi.controller;
 
+
 import com.qingxun.app.merchantapi.service.MerchantService;
 import com.qingxun.app.userapi.token.TokenService;
 import com.qingxun.app.userapi.token.UserLoginToken;
@@ -24,7 +25,9 @@ public class MerchantController {
         this.merchantService = merchantService;
     }
 
+    private final
     TokenService tokenService = new TokenService();
+
 
     /**
      * 用户申请店铺
@@ -60,7 +63,7 @@ public class MerchantController {
     @UserLoginToken
     @PostMapping("/userGetMer")
     public Map<String, Object> userGetMer(HttpServletRequest httpServletRequest) {
-        String openId = tokenService.getOpenId(httpServletRequest);
+        String openId = tokenService.getUserIdByToken(httpServletRequest);
         return merchantService.userGetMer(openId);
     }
 

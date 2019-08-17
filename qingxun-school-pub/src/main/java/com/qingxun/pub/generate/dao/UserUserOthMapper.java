@@ -162,7 +162,4 @@ public interface UserUserOthMapper {
           "and oth_id = #{othId,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(UserUserOth record);
-
-
-    int userAddSite(Integer userId);
 }

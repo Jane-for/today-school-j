@@ -574,63 +574,133 @@ public class CommodityExample {
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1IsNull() {
-            addCriterion("com_typy_id1 is null");
+        public Criteria andType1IdIsNull() {
+            addCriterion("type1_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1IsNotNull() {
-            addCriterion("com_typy_id1 is not null");
+        public Criteria andType1IdIsNotNull() {
+            addCriterion("type1_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1EqualTo(Integer value) {
-            addCriterion("com_typy_id1 =", value, "comTypyId1");
+        public Criteria andType1IdEqualTo(Integer value) {
+            addCriterion("type1_id =", value, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1NotEqualTo(Integer value) {
-            addCriterion("com_typy_id1 <>", value, "comTypyId1");
+        public Criteria andType1IdNotEqualTo(Integer value) {
+            addCriterion("type1_id <>", value, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1GreaterThan(Integer value) {
-            addCriterion("com_typy_id1 >", value, "comTypyId1");
+        public Criteria andType1IdGreaterThan(Integer value) {
+            addCriterion("type1_id >", value, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1GreaterThanOrEqualTo(Integer value) {
-            addCriterion("com_typy_id1 >=", value, "comTypyId1");
+        public Criteria andType1IdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("type1_id >=", value, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1LessThan(Integer value) {
-            addCriterion("com_typy_id1 <", value, "comTypyId1");
+        public Criteria andType1IdLessThan(Integer value) {
+            addCriterion("type1_id <", value, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1LessThanOrEqualTo(Integer value) {
-            addCriterion("com_typy_id1 <=", value, "comTypyId1");
+        public Criteria andType1IdLessThanOrEqualTo(Integer value) {
+            addCriterion("type1_id <=", value, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1In(List<Integer> values) {
-            addCriterion("com_typy_id1 in", values, "comTypyId1");
+        public Criteria andType1IdIn(List<Integer> values) {
+            addCriterion("type1_id in", values, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1NotIn(List<Integer> values) {
-            addCriterion("com_typy_id1 not in", values, "comTypyId1");
+        public Criteria andType1IdNotIn(List<Integer> values) {
+            addCriterion("type1_id not in", values, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1Between(Integer value1, Integer value2) {
-            addCriterion("com_typy_id1 between", value1, value2, "comTypyId1");
+        public Criteria andType1IdBetween(Integer value1, Integer value2) {
+            addCriterion("type1_id between", value1, value2, "type1Id");
             return (Criteria) this;
         }
 
-        public Criteria andComTypyId1NotBetween(Integer value1, Integer value2) {
-            addCriterion("com_typy_id1 not between", value1, value2, "comTypyId1");
+        public Criteria andType1IdNotBetween(Integer value1, Integer value2) {
+            addCriterion("type1_id not between", value1, value2, "type1Id");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameIsNull() {
+            addCriterion("com_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameIsNotNull() {
+            addCriterion("com_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameEqualTo(String value) {
+            addCriterion("com_name =", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameNotEqualTo(String value) {
+            addCriterion("com_name <>", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameGreaterThan(String value) {
+            addCriterion("com_name >", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameGreaterThanOrEqualTo(String value) {
+            addCriterion("com_name >=", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameLessThan(String value) {
+            addCriterion("com_name <", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameLessThanOrEqualTo(String value) {
+            addCriterion("com_name <=", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameLike(String value) {
+            addCriterion("com_name like", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameNotLike(String value) {
+            addCriterion("com_name not like", value, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameIn(List<String> values) {
+            addCriterion("com_name in", values, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameNotIn(List<String> values) {
+            addCriterion("com_name not in", values, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameBetween(String value1, String value2) {
+            addCriterion("com_name between", value1, value2, "comName");
+            return (Criteria) this;
+        }
+
+        public Criteria andComNameNotBetween(String value1, String value2) {
+            addCriterion("com_name not between", value1, value2, "comName");
             return (Criteria) this;
         }
     }

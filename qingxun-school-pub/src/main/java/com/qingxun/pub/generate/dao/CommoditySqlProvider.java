@@ -70,8 +70,12 @@ public class CommoditySqlProvider {
             sql.VALUES("com_top", "#{comTop,jdbcType=INTEGER}");
         }
         
-        if (record.getComTypyId1() != null) {
-            sql.VALUES("com_typy_id1", "#{comTypyId1,jdbcType=INTEGER}");
+        if (record.getType1Id() != null) {
+            sql.VALUES("type1_id", "#{type1Id,jdbcType=INTEGER}");
+        }
+        
+        if (record.getComName() != null) {
+            sql.VALUES("com_name", "#{comName,jdbcType=VARCHAR}");
         }
         
         return sql.toString();
@@ -95,7 +99,8 @@ public class CommoditySqlProvider {
         sql.SELECT("com_imgurl");
         sql.SELECT("com_struts");
         sql.SELECT("com_top");
-        sql.SELECT("com_typy_id1");
+        sql.SELECT("type1_id");
+        sql.SELECT("com_name");
         sql.FROM("commodity");
         applyWhere(sql, example, false);
         
@@ -143,8 +148,12 @@ public class CommoditySqlProvider {
             sql.SET("com_top = #{record.comTop,jdbcType=INTEGER}");
         }
         
-        if (record.getComTypyId1() != null) {
-            sql.SET("com_typy_id1 = #{record.comTypyId1,jdbcType=INTEGER}");
+        if (record.getType1Id() != null) {
+            sql.SET("type1_id = #{record.type1Id,jdbcType=INTEGER}");
+        }
+        
+        if (record.getComName() != null) {
+            sql.SET("com_name = #{record.comName,jdbcType=VARCHAR}");
         }
         
         applyWhere(sql, example, true);
@@ -167,7 +176,8 @@ public class CommoditySqlProvider {
         sql.SET("com_imgurl = #{record.comImgurl,jdbcType=VARCHAR}");
         sql.SET("com_struts = #{record.comStruts,jdbcType=VARCHAR}");
         sql.SET("com_top = #{record.comTop,jdbcType=INTEGER}");
-        sql.SET("com_typy_id1 = #{record.comTypyId1,jdbcType=INTEGER}");
+        sql.SET("type1_id = #{record.type1Id,jdbcType=INTEGER}");
+        sql.SET("com_name = #{record.comName,jdbcType=VARCHAR}");
         
         CommodityExample example = (CommodityExample) parameter.get("example");
         applyWhere(sql, example, true);
@@ -204,8 +214,12 @@ public class CommoditySqlProvider {
             sql.SET("com_top = #{comTop,jdbcType=INTEGER}");
         }
         
-        if (record.getComTypyId1() != null) {
-            sql.SET("com_typy_id1 = #{comTypyId1,jdbcType=INTEGER}");
+        if (record.getType1Id() != null) {
+            sql.SET("type1_id = #{type1Id,jdbcType=INTEGER}");
+        }
+        
+        if (record.getComName() != null) {
+            sql.SET("com_name = #{comName,jdbcType=VARCHAR}");
         }
         
         sql.WHERE("_id = #{id,jdbcType=INTEGER}");

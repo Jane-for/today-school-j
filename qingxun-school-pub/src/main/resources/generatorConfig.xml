@@ -5,10 +5,10 @@
 <generatorConfiguration>
 
     <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!-- 注释 -->
         <commentGenerator>
-            <property name="suppressDate" value="true"/>
-            <!-- 是否去除自动生成的注释 true：是 ： true:否 -->
-            <property name="suppressAllComments" value="false"/>
+            <property name="suppressAllComments" value="true"/><!-- 是否取消注释 -->
+            <property name="suppressDate" value="true"/> <!-- 是否生成注释代时间戳-->
         </commentGenerator>
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -44,64 +44,55 @@
 
 
 -->
-        <table tableName="user_user" domainObjectName="UserUser" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="user_merchant" domainObjectName="UserMerchant" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="user_admin" domainObjectName="UserAdmin" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="user_user_oth" domainObjectName="UserUserOth" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
+        <table tableName="user_user" domainObjectName="UserUser"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="user_merchant" domainObjectName="UserMerchant"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="user_admin" domainObjectName="UserAdmin"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="user_user_oth" domainObjectName="UserUserOth"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
 
 
-
-
-
-        <table tableName="mission_jpuz" domainObjectName="MissionJpuz" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="mission" domainObjectName="Mission" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="indent" domainObjectName="Indent" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="commodity_type2" domainObjectName="CommodityType2" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="commodity" domainObjectName="Commodity" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="commodity_type1" domainObjectName="CommodityType1" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        <table tableName="app_carousel" domainObjectName="AppCarousel" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-
-
+        <table tableName="mission_jpuz" domainObjectName="MissionJpuz"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="mission" domainObjectName="Mission"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="indent" domainObjectName="Indent"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="commodity_type2" domainObjectName="CommodityType2"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="commodity" domainObjectName="Commodity"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="commodity_type1" domainObjectName="CommodityType1"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
+        <table tableName="app_carousel" domainObjectName="AppCarousel"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
 
 
         <!--视图-->
-        <table tableName="view_mis_jpuz_user" domainObjectName="ViewMisJpuzUser" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
+        <table tableName="view_mis_jpuz_user" domainObjectName="ViewMisJpuzUser"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
 
-        <table tableName="view_mis_all" domainObjectName="ViewMisAll" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
+        <table tableName="view_mis_all" domainObjectName="ViewMisAll"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
 
-        <table tableName="view_mis_jpuz_ufqk" domainObjectName="ViewMisJpuzUfqk" enableCountByExample="true"
-               enableUpdateByExample="true"
-               enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-
-
-
-
+        <table tableName="view_mis_jpuz_ufqk" domainObjectName="ViewMisJpuzUfqk"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"></table>
 
 
     </context>

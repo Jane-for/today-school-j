@@ -14,15 +14,17 @@ public interface CommodityDAO {
     @Select({
             "SELECT * FROM commodity WHERE mar_id = ${merchantId}"
     })
+
     @Results({
             @Result(column="_id", property="id", jdbcType=JdbcType.INTEGER, id=true),
             @Result(column="mar_id", property="marId", jdbcType=JdbcType.INTEGER),
             @Result(column="com_id", property="comId", jdbcType=JdbcType.INTEGER),
+            @Result(column="com_name", property="comName", jdbcType=JdbcType.VARCHAR),
             @Result(column="com_imgurl", property="comImgurl", jdbcType=JdbcType.VARCHAR),
-            @Result(column="com_struts", property="comStruts", jdbcType=JdbcType.VARCHAR),
-            @Result(column="com_top", property="comTop", jdbcType=JdbcType.INTEGER),
+            @Result(column="com_money", property="comMoney", jdbcType=JdbcType.VARCHAR),
             @Result(column="type1_id", property="type1Id", jdbcType=JdbcType.INTEGER),
-            @Result(column="com_name", property="comName", jdbcType=JdbcType.VARCHAR)
+            @Result(column="com_struts", property="comStruts", jdbcType=JdbcType.VARCHAR),
+            @Result(column="com_top", property="comTop", jdbcType=JdbcType.INTEGER)
     })
     List<Commodity> get(@Param("merchantId") Integer merchantId);
 
@@ -36,4 +38,9 @@ public interface CommodityDAO {
             @Result(column="type1_name", property="type1Name", jdbcType=JdbcType.VARCHAR)
     })
     List<CommodityType1> getType1(@Param("merchantId") Integer merchantId);
+
+    @Select({
+            "SELECT MAX(com_id) FROM commodity"
+    })
+    int getMaxComId();
 }

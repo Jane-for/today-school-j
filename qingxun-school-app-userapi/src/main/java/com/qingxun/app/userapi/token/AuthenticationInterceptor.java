@@ -52,7 +52,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                     throw new RuntimeException("无token");
                 }
                 // 获取 token 中的 user id
-                String openid = tokenService.getUserIdByToken(httpServletRequest);
+                String openid = tokenService.getOpenId(httpServletRequest);
                 UserUser user = userStuDAO.selectByPrimaryKey(openid);
                 if (user == null) {
                     throw new RuntimeException("用户不存在");

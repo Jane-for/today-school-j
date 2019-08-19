@@ -35,7 +35,7 @@ public class MissionController {
     @UserLoginToken
     @PostMapping(value = "/getMisList")
     public Map<String, Object> getMisList(HttpServletRequest httpServletRequest) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return missionService.getMisList(userIdByToken);
     }
 
@@ -50,7 +50,7 @@ public class MissionController {
     @UserLoginToken
     @PostMapping(value = "/userAddMis")
     public Map<String, Object> userAddMis(HttpServletRequest httpServletRequest, @RequestBody Map<String, Object> stringObjectMap) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return missionService.userAddMis(userIdByToken, stringObjectMap);
     }
 
@@ -79,7 +79,7 @@ public class MissionController {
     @UserLoginToken
     @PostMapping(value = "/getMisListByUserId")
     public Map<String, Object> getMisListByUserId(HttpServletRequest httpServletRequest) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return missionService.getMisListByUserId(userIdByToken);
     }
 
@@ -93,7 +93,7 @@ public class MissionController {
     @UserLoginToken
     @PostMapping(value = "/getJpUzNumByJpUzId/{jpuzId}")
     public Map<String, Object> getJpUzNumByJpUzId(HttpServletRequest httpServletRequest, @PathVariable String jpuzId) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return missionService.getJpUzNumByJpUzId(jpuzId);
     }
 

@@ -4,8 +4,12 @@ import com.qingxun.app.merchantapi.service.MerCommodityService;
 
 import com.qingxun.app.userapi.token.TokenService;
 import com.qingxun.app.userapi.token.UserLoginToken;
+import com.qingxun.pub.generate.pojo.Commodity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +26,7 @@ public class MerCommodityController {
     private final
     TokenService tokenService = new TokenService();
 
-
+    Logger logger = LoggerFactory.getLogger(MerchantController.class);
     @Autowired
     public MerCommodityController(MerCommodityService merCommodityService) {
         this.merCommodityService = merCommodityService;
@@ -65,9 +69,55 @@ public class MerCommodityController {
     @UserLoginToken
     @PostMapping("/getType2")
     public Map<String, Object> getType2(HttpServletRequest httpServletRequest) {
-        String openId = tokenService.getUserToken(httpServletRequest);
+        String openId = tokenService.getOpenId(httpServletRequest);
         return merCommodityService.get(openId);
     }
+
+    /**
+     * 用户添加商品
+     * @param httpServletRequest
+     * @param commodity
+     * @return
+     */
+    @UserLoginToken
+    @PostMapping(value = "/userAddCom")
+    public Map<String, Object> userAddCom(HttpServletRequest httpServletRequest, @RequestBody Commodity commodity) {
+        logger.info(commodity.toString());
+
+        String openId = tokenService.getOpenId(httpServletRequest);
+        return merCommodityService.userAddCom(openId,commodity);
+    }
+
+    /**
+     * 用户添加商品
+     * @param httpServletRequest
+     * @param commodity
+     * @return
+     */
+    @UserLoginToken
+    @PostMapping(value = "/userUpCom")
+    public Map<String, Object> userUpCom(HttpServletRequest httpServletRequest, @RequestBody Commodity commodity) {
+        logger.info(commodity.toString());
+
+        String openId = tokenService.getOpenId(httpServletRequest);
+        return merCommodityService.userUpCom(openId,commodity);
+    }
+
+    /**
+     * 商户添加类型
+     * @param httpServletRequest
+     * @param map
+     * @return
+     */
+    @UserLoginToken
+    @PostMapping("addType")
+    public Map<String, Object> addType(HttpServletRequest httpServletRequest, @RequestBody Map<String,Object> map) {
+        logger.info(map.toString());
+        String openId = tokenService.getOpenId(httpServletRequest);
+        return merCommodityService.addType(openId,map);
+    }
+
+
 
 }
 

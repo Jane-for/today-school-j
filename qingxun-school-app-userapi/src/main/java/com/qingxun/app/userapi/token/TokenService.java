@@ -40,7 +40,7 @@ public class TokenService {
      * @param httpServletRequest
      * @return
      */
-    public String getUserIdByToken(HttpServletRequest httpServletRequest){
+    public String getOpenId(HttpServletRequest httpServletRequest){
         String userToken = getUserToken(httpServletRequest);
         String userId;
         try {
@@ -56,15 +56,15 @@ public class TokenService {
      * @param httpServletRequest
      * @return
      */
-    public String getOpenId(HttpServletRequest httpServletRequest){
-        String userToken = getUserToken(httpServletRequest);
-        String userId;
-        try {
-            userId = JWT.decode(userToken).getAudience().get(0);
-        } catch (JWTDecodeException j) {
-            throw new RuntimeException("401");
-        }
-
-        return userId;
-    }
+//    public String getOpenId(HttpServletRequest httpServletRequest){
+//        String userToken = getUserToken(httpServletRequest);
+//        String userId;
+//        try {
+//            userId = JWT.decode(userToken).getAudience().get(0);
+//        } catch (JWTDecodeException j) {
+//            throw new RuntimeException("401");
+//        }
+//
+//        return userId;
+//    }
 }

@@ -55,7 +55,7 @@ public class UserUserController {
     @PostMapping("/getInfo")
     public Map<String, Object> getInfo(HttpServletRequest httpServletRequest) {
 
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
 
         return userUserService.getInfo(userIdByToken);
     }

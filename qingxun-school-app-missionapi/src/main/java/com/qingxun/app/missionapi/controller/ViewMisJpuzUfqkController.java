@@ -41,7 +41,7 @@ public class ViewMisJpuzUfqkController {
     @UserLoginToken
     @PostMapping(value = "/userUpMisType/{type}")
     public Map<String, Object> userUpMisType(HttpServletRequest httpServletRequest, @PathVariable String type) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return viewMisJpuzUfqkService.userUpMisType(userIdByToken, type);
     }
 
@@ -58,7 +58,7 @@ public class ViewMisJpuzUfqkController {
     @UserLoginToken
     @PostMapping(value = "/userUpMis/{type}/{id}")
     public Map<String, Object> userUpMis(HttpServletRequest httpServletRequest, @PathVariable String type, @PathVariable String id) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return viewMisJpuzUfqkService.userUpMis(userIdByToken, type,id);
     }
 

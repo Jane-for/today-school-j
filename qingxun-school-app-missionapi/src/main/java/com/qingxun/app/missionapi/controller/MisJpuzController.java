@@ -47,7 +47,7 @@ public class MisJpuzController {
     @UserLoginToken
     @PostMapping(value = "/userPutMis/{MisId}")
     public Map<String, Object> userPutMis(HttpServletRequest httpServletRequest, @PathVariable String MisId) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return missionService.userPutMis(userIdByToken, MisId);
     }
 
@@ -61,7 +61,7 @@ public class MisJpuzController {
     @UserLoginToken
     @PostMapping(value = "/userGetMis/{type}")
     public Map<String, Object> userGetMis(HttpServletRequest httpServletRequest, @PathVariable String type) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return misJpuzService.userGetMis(userIdByToken, type);
     }
 
@@ -74,7 +74,7 @@ public class MisJpuzController {
     @UserLoginToken
     @PostMapping(value = "/userGetMis")
     public Map<String, Object> userGetMis(HttpServletRequest httpServletRequest) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return misJpuzService.userGetMis(userIdByToken);
     }
 
@@ -87,7 +87,7 @@ public class MisJpuzController {
     @UserLoginToken
     @PostMapping(value = "/userGetMisInfoById/{id}")
     public Map<String, Object> userGetMisInfoById(HttpServletRequest httpServletRequest, @PathVariable int id) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return misJpuzService.userGetMisInfoById(userIdByToken, id);
     }
 
@@ -100,7 +100,7 @@ public class MisJpuzController {
     @UserLoginToken
     @PostMapping(value = "/userGetFaBuMisList")
     public Map<String, Object> userGetFaBuMisList(HttpServletRequest httpServletRequest) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return misJpuzService.userGetFaBuMisList(userIdByToken);
     }
 
@@ -113,7 +113,7 @@ public class MisJpuzController {
     @UserLoginToken
     @PostMapping(value = "/userGetFaBuMisList/{type}")
     public Map<String, Object> userGetFaBuMisList(HttpServletRequest httpServletRequest, @PathVariable String type) {
-        String userIdByToken = tokenService.getUserIdByToken(httpServletRequest);
+        String userIdByToken = tokenService.getOpenId(httpServletRequest);
         return misJpuzService.userGetFaBuMisList(userIdByToken,type);
     }
 

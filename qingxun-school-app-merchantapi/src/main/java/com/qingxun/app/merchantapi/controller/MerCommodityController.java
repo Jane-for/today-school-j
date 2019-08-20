@@ -2,8 +2,10 @@ package com.qingxun.app.merchantapi.controller;
 
 import com.qingxun.app.merchantapi.service.MerCommodityService;
 
+import com.qingxun.app.userapi.token.PassToken;
 import com.qingxun.app.userapi.token.TokenService;
 import com.qingxun.app.userapi.token.UserLoginToken;
+import com.qingxun.pub.Result;
 import com.qingxun.pub.generate.pojo.Commodity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -83,7 +85,6 @@ public class MerCommodityController {
     @PostMapping(value = "/userAddCom")
     public Map<String, Object> userAddCom(HttpServletRequest httpServletRequest, @RequestBody Commodity commodity) {
         logger.info(commodity.toString());
-
         String openId = tokenService.getOpenId(httpServletRequest);
         return merCommodityService.userAddCom(openId,commodity);
     }
@@ -115,6 +116,29 @@ public class MerCommodityController {
         logger.info(map.toString());
         String openId = tokenService.getOpenId(httpServletRequest);
         return merCommodityService.addType(openId,map);
+    }
+
+
+
+    /**
+     * 首页
+     * 用户获取最火的商品
+     * @return
+     */
+    @PassToken
+    @PostMapping(value = "/getNewCom")
+    public Result getNewCom() {
+        return merCommodityService.getNewCom();
+    }
+    /**
+     * 首页
+     * 用户获取店铺列表
+     * @return
+     */
+    @PassToken
+    @PostMapping(value = "/getNewMer")
+    public Result getNewMer() {
+        return merCommodityService.getNewMer();
     }
 
 

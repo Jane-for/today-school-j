@@ -92,4 +92,6 @@ public class MerchantService {
         resultMap.put("result", userMerchant);
         return resultMap;
     }
+
+//    public Map<String, Object> getNewCom()
 }

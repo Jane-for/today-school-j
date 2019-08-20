@@ -90,19 +90,4 @@ public class Commodity {
     public void setComTop(Integer comTop) {
         this.comTop = comTop;
     }
-
-    @Override
-    public String toString() {
-        return "Commodity{" +
-                "id=" + id +
-                ", marId=" + marId +
-                ", comId=" + comId +
-                ", comName='" + comName + '\'' +
-                ", comImgurl='" + comImgurl + '\'' +
-                ", comMoney='" + comMoney + '\'' +
-                ", type1Id=" + type1Id +
-                ", comStruts='" + comStruts + '\'' +
-                ", comTop=" + comTop +
-                '}';
-    }
 }

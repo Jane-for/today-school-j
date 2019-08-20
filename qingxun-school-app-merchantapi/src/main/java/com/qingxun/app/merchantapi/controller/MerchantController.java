@@ -2,6 +2,7 @@ package com.qingxun.app.merchantapi.controller;
 
 
 import com.qingxun.app.merchantapi.service.MerchantService;
+import com.qingxun.app.userapi.token.PassToken;
 import com.qingxun.app.userapi.token.TokenService;
 import com.qingxun.app.userapi.token.UserLoginToken;
 import org.springframework.beans.factory.annotation.Autowired;

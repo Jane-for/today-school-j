@@ -1,10 +1,12 @@
 package com.qingxun.app.merchantapi.service;
 
+import com.qingxun.pub.Result;
 import com.qingxun.pub.commodity.CommodityType1DAO;
 import com.qingxun.pub.generate.dao.CommodityMapper;
 import com.qingxun.pub.generate.dao.CommodityType1Mapper;
 import com.qingxun.pub.generate.pojo.Commodity;
 import com.qingxun.pub.generate.pojo.CommodityType1;
+import com.qingxun.pub.generate.pojo.UserMerchant;
 import com.qingxun.pub.generate.pojo.UserUser;
 import com.qingxun.pub.merchant.CommodityDAO;
 import com.qingxun.pub.user.UserUserDAO;
@@ -121,5 +123,22 @@ public class MerCommodityService {
             e.printStackTrace();
         }
         return resultMap;
+    }
+
+    public Result getNewCom() {
+        Result result = new Result();
+        result.setResultcode(200);
+        List<Commodity> commodityList = commodityDAO.getNewCom();
+        result.setResult(commodityList);
+        return result;
+    }
+
+    public Result getNewMer() {
+
+        Result result = new Result();
+        result.setResultcode(200);
+        List<UserMerchant> userMerchantList = commodityDAO.getNewMer();
+        result.setResult(userMerchantList);
+        return result;
     }
 }
